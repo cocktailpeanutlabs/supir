@@ -2,6 +2,15 @@ const config = require("./config.js")
 const pre = require("./pre.js")
 module.exports = async (kernel) => {
   let script = {
+    requires: [{
+      type: "conda",
+      name: ["cudnn", "libzlib-wapi"],
+      args: "-c conda-forge"
+    }, {
+      type: "conda",
+      name: ["cuda"],
+      args: "-c nvidia/label/cuda-12.1.0"
+    }],
     run: [{
       method: "shell.run",
       params: {
