@@ -1,7 +1,7 @@
 module.exports = (config, kernel) => {
   const x = {
     "win32": {
-      "nvidia": `pip install torch torchvision torchaudio ${config.xformers ? 'xformers' : ''} --index-url https://download.pytorch.org/whl/cu118`,
+      "nvidia": `pip install torch torchvision torchaudio ${config.xformers ? 'xformers' : ''} --index-url https://download.pytorch.org/whl/cu121`,
       "amd": "pip install torch-directml",
       "cpu": "pip install torch torchvision torchaudio"
     },

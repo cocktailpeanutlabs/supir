@@ -18,12 +18,12 @@ module.exports = async (kernel) => {
     }, {
       method: "shell.run",
       params: {
-        venv: "env",
-        //conda: "env",
+        //venv: "env",
+        conda: "env",
         path: "app",
         message: [
-          //"conda install -y cudnn libzlib-wapi -c conda-forge",
-          //"conda install -y cuda -c nvidia/label/cuda-11.8.0",
+          "conda install -y cudnn libzlib-wapi -c conda-forge",
+          "conda install -y cuda -c nvidia/label/cuda-11.8.0",
           "pip install -r requirements.txt"
         ],
       }
