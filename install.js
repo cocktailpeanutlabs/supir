@@ -2,6 +2,9 @@ const config = require("./config.js")
 const pre = require("./pre.js")
 module.exports = async (kernel) => {
   let script = {
+    requires: [{
+      name: "cuda"
+    }],
     run: [{
       method: "shell.run",
       params: {
