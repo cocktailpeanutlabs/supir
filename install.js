@@ -28,7 +28,7 @@ module.exports = async (kernel) => {
       method: "fs.share",
       params: {
         drive: {
-          "checkpoints": "app/supir_checkpoints"
+          "supir_checkpoints": "app/supir_checkpoints"
         }
       }
     }, {
