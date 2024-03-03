@@ -2,9 +2,6 @@ const config = require("./config.js")
 const pre = require("./pre.js")
 module.exports = async (kernel) => {
   let script = {
-    requires: [{
-      name: "cuda"
-    }],
     run: [{
       method: "shell.run",
       params: {
@@ -21,9 +18,11 @@ module.exports = async (kernel) => {
     }, {
       method: "shell.run",
       params: {
-        venv: "env",
+        conda: "env",
         path: "app",
         message: [
+          //"conda install -y cudnn libzlib-wapi -c conda-forge",
+          //"conda install -y cuda -c nvidia/label/cuda-11.8.0",
           "pip install -r requirements.txt"
         ],
       }
@@ -47,11 +46,11 @@ module.exports = async (kernel) => {
           "https://github.com/cocktailpeanutlabs/forge.git"
         ]
       }
-    }, {
-      method: "fs.share",
-      params: {
-        venv: "app/env"
-      }
+//    }, {
+//      method: "fs.share",
+//      params: {
+//        venv: "app/env"
+//      }
     }, {
       method: "fs.download",
       params: {
