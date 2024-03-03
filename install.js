@@ -18,7 +18,8 @@ module.exports = async (kernel) => {
     }, {
       method: "shell.run",
       params: {
-        conda: "env",
+        venv: "env",
+        //conda: "env",
         path: "app",
         message: [
           //"conda install -y cudnn libzlib-wapi -c conda-forge",
