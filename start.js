@@ -14,6 +14,7 @@ module.exports = async (kernel) => {
           "LLAVA_MODEL_PATH": "{{path.resolve(cwd, 'app/llava-v1.5-13b')}}"
         },
         message: [
+          "nvidia-smi",
           "python gradio_demo.py",
         ],
         on: [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
