@@ -2,15 +2,15 @@ const config = require("./config.js")
 const pre = require("./pre.js")
 module.exports = async (kernel) => {
   let script = {
-    requires: [{
-      type: "conda",
-      name: ["cudnn", "libzlib-wapi"],
-      args: "-c conda-forge"
-    }, {
-      type: "conda",
-      name: ["cuda"],
-      args: "-c nvidia/label/cuda-12.1.0"
-    }],
+//    requires: [{
+//      type: "conda",
+//      name: ["cudnn", "libzlib-wapi"],
+//      args: "-c conda-forge"
+//    }, {
+//      type: "conda",
+//      name: ["cuda"],
+//      args: "-c nvidia/label/cuda-12.1.0"
+//    }],
     run: [{
       method: "shell.run",
       params: {
@@ -32,7 +32,8 @@ module.exports = async (kernel) => {
         path: "app",
         message: [
           "conda install -y cudnn libzlib-wapi -c conda-forge",
-          "conda install -y cuda -c nvidia/label/cuda-11.8.0",
+          //"conda install -y cuda -c nvidia/label/cuda-11.8.0",
+          "conda install -y cuda -c nvidia/label/cuda-12.1.0",
           "pip install -r requirements.txt"
         ],
       }
