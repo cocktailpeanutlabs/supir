@@ -16,7 +16,7 @@ module.exports = async (kernel) => {
         message: [
           "nvidia-smi",
           //"python gradio_demo.py --loading_half_params --use_tile_vae --load_8bit_llava",
-          "python gradio_demo.py --loading_half_params --use_tile_vae --no_llava"
+          "python gradio_demo.py --use_image_slider --log_history --loading_half_params --use_tile_vae --no_llava"
         ],
         on: [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
       }
