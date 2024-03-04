@@ -86,7 +86,8 @@ module.exports = async (kernel) => {
   }
   let pre_command = pre(config, kernel)
   if (pre_command) {
-    script.run[2].params.message = [pre_command].concat(script.run[2].params.message)
+    //script.run[2].params.message = [pre_command].concat(script.run[2].params.message)
+    script.run[1].params.message = [pre_command].concat(script.run[1].params.message)
   }
   return script
 }
