@@ -27,8 +27,8 @@ module.exports = async (kernel) => {
     }, {
       method: "shell.run",
       params: {
-        //venv: "env",
-        conda: "env",
+        venv: "env",
+        //conda: "env",
         path: "app",
         message: [
           "pip install -r requirements.txt"

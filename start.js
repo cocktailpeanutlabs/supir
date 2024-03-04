@@ -5,8 +5,8 @@ module.exports = async (kernel) => {
       method: "shell.run",
       params: {
         path: "app",
-        //venv: "env",
-        conda: "env",
+        venv: "env",
+        //conda: "env",
         env: {
           "SDXL_CKPT": "{{path.resolve(cwd, 'app/checkpoints/sd_xl_base_1.0.safetensors')}}",
           "SUPIR_CKPT_F": "{{path.resolve(cwd, 'app/supir_checkpoints/SUPIR-v0F.ckpt')}}",
