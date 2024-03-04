@@ -31,7 +31,6 @@ module.exports = async (kernel) => {
         conda: "env",
         path: "app",
         message: [
-          "conda install -y cudatoolkit -c anaconda",
           "pip install -r requirements.txt"
         ],
       }
@@ -87,7 +86,7 @@ module.exports = async (kernel) => {
   }
   let pre_command = pre(config, kernel)
   if (pre_command) {
-    script.run[1].params.message = [pre_command].concat(script.run[1].params.message)
+    script.run[2].params.message = [pre_command].concat(script.run[2].params.message)
   }
   return script
 }
