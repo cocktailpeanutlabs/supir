@@ -18,12 +18,12 @@ module.exports = async (kernel) => {
           "git clone https://github.com/cocktailpeanut/SUPIR app",
         ]
       }
-    }, {
-      method: "shell.run",
-      params: {
-        message: "git clone https://huggingface.co/liuhaotian/llava-v1.5-13b",
-        path: "app"
-      }
+//    }, {
+//      method: "shell.run",
+//      params: {
+//        message: "git clone https://huggingface.co/liuhaotian/llava-v1.5-13b",
+//        path: "app"
+//      }
     }, {
       method: "shell.run",
       params: {
