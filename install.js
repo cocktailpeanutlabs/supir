@@ -17,8 +17,8 @@ module.exports = async (kernel) => {
       params: {
         message: [
           //"git clone https://github.com/cocktailpeanut/SUPIR app",
-          //"git clone https://github.com/Fanghua-Yu/SUPIR app",
-          "git clone https://github.com/betapeanut/SUPIR app",
+          "git clone https://github.com/Fanghua-Yu/SUPIR app",
+          //"git clone https://github.com/betapeanut/SUPIR app",
         ]
       }
     }, {
@@ -33,12 +33,13 @@ module.exports = async (kernel) => {
         src: "SUPIR_v0.yaml",
         dest: "app/options/SUPIR_v0.yaml",
       }
-//    }, {
-//      method: "shell.run",
-//      params: {
-//        message: "git clone https://huggingface.co/liuhaotian/llava-v1.5-13b",
-//        path: "app"
-//      }
+    }, {
+      method: "shell.run",
+      params: {
+        //message: "git clone --depth 1 https://huggingface.co/liuhaotian/llava-v1.5-13b",
+        message: "git clone --depth 1 https://huggingface.co/liuhaotian/llava-v1.5-7b",
+        path: "app"
+      }
     }, {
       method: "shell.run",
       params: {
