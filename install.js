@@ -7,9 +7,9 @@ module.exports = async (kernel) => {
       method: "shell.run",
       params: {
         message: [
-          //"git clone https://github.com/cocktailpeanut/SUPIR app",
+          "git clone https://github.com/cocktailpeanut/SUPIR app",
           //"git clone https://github.com/Fanghua-Yu/SUPIR app",
-          "git clone https://github.com/betapeanut/SUPIR app",
+          //"git clone https://github.com/betapeanut/SUPIR app",
         ]
       }
     }, {
