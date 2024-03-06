@@ -62,11 +62,11 @@ module.exports = async (kernel) => {
           "https://github.com/cocktailpeanutlabs/forge.git"
         ]
       }
-//    }, {
-//      method: "fs.share",
-//      params: {
-//        venv: "app/env"
-//      }
+    }, {
+      method: "fs.share",
+      params: {
+        venv: "app/env"
+      }
     }, {
       method: "fs.download",
       params: {
