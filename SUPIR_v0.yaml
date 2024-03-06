@@ -153,7 +153,7 @@ model:
 #SUPIR_CKPT_F: /opt/data/private/AIGC_pretrain/SUPIR_cache/SUPIR-v0F.ckpt
 #SUPIR_CKPT_Q: /opt/data/private/AIGC_pretrain/SUPIR_cache/SUPIR-v0Q.ckpt
 #SUPIR_CKPT: ~
-SDXL_CKPT=checkpoints/sd_xl_base_1.0.safetensors
-SUPIR_CKPT_F=supir_checkpoints/SUPIR-v0F.ckpt
-SUPIR_CKPT_Q=supir_checkpoints/SUPIR-v0Q.ckpt
-LLAVA_MODEL_PATH=llava-v1.5-13b
+SDXL_CKPT: checkpoints/sd_xl_base_1.0.safetensors
+SUPIR_CKPT_F: supir_checkpoints/SUPIR-v0F.ckpt
+SUPIR_CKPT_Q: supir_checkpoints/SUPIR-v0Q.ckpt
+LLAVA_MODEL_PATH: llava-v1.5-13b
