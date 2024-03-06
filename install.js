@@ -15,7 +15,8 @@ module.exports = async (kernel) => {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/cocktailpeanut/SUPIR app",
+          //"git clone https://github.com/cocktailpeanut/SUPIR app",
+          "git clone https://github.com/Fanghua-Yu/SUPIR app",
         ]
       }
 //    }, {
@@ -31,8 +32,20 @@ module.exports = async (kernel) => {
         //conda: "env",
         path: "app",
         message: [
-          "pip install -r requirements.txt"
+          "pip install -r ../requirements.txt"
         ],
+      }
+    }, {
+      method: "fs.copy",
+      params: {
+        src: "CKPT_PTH.py",
+        dest: "app/CKPT_PTH.py"
+      }
+    }, {
+      method: "fs.copy",
+      params: {
+        src: "SUPIR_v0.yaml",
+        dest: "app/options/SUPIR_v0.yaml",
       }
     }, {
       method: "fs.share",

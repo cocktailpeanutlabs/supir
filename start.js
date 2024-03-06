@@ -7,12 +7,12 @@ module.exports = async (kernel) => {
         path: "app",
         venv: "env",
         //conda: "env",
-        env: {
-          "SDXL_CKPT": "{{path.resolve(cwd, 'app/checkpoints/sd_xl_base_1.0.safetensors')}}",
-          "SUPIR_CKPT_F": "{{path.resolve(cwd, 'app/supir_checkpoints/SUPIR-v0F.ckpt')}}",
-          "SUPIR_CKPT_Q": "{{path.resolve(cwd, 'app/supir_checkpoints/SUPIR-v0Q.ckpt')}}",
-          "LLAVA_MODEL_PATH": "{{path.resolve(cwd, 'app/llava-v1.5-13b')}}"
-        },
+        //env: {
+        //  "SDXL_CKPT": "{{path.resolve(cwd, 'app/checkpoints/sd_xl_base_1.0.safetensors')}}",
+        //  "SUPIR_CKPT_F": "{{path.resolve(cwd, 'app/supir_checkpoints/SUPIR-v0F.ckpt')}}",
+        //  "SUPIR_CKPT_Q": "{{path.resolve(cwd, 'app/supir_checkpoints/SUPIR-v0Q.ckpt')}}",
+        //  "LLAVA_MODEL_PATH": "{{path.resolve(cwd, 'app/llava-v1.5-13b')}}"
+        //},
         message: [
           "nvidia-smi",
           //"python gradio_demo.py --loading_half_params --use_tile_vae --load_8bit_llava",
