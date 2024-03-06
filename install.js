@@ -1,6 +1,7 @@
 const config = require("./config.js")
 const pre = require("./pre.js")
 module.exports = async (kernel) => {
+  let torch_xformers = pre(config, kernel)
   let script = {
 //    requires: [{
 //      type: "conda",
@@ -19,6 +20,18 @@ module.exports = async (kernel) => {
           "git clone https://github.com/Fanghua-Yu/SUPIR app",
         ]
       }
+    }, {
+      method: "fs.copy",
+      params: {
+        src: "CKPT_PTH.py",
+        dest: "app/CKPT_PTH.py"
+      }
+    }, {
+      method: "fs.copy",
+      params: {
+        src: "SUPIR_v0.yaml",
+        dest: "app/options/SUPIR_v0.yaml",
+      }
 //    }, {
 //      method: "shell.run",
 //      params: {
@@ -32,20 +45,9 @@ module.exports = async (kernel) => {
         //conda: "env",
         path: "app",
         message: [
+          torch_xformers,
           "pip install -r ../requirements.txt"
         ],
-      }
-    }, {
-      method: "fs.copy",
-      params: {
-        src: "CKPT_PTH.py",
-        dest: "app/CKPT_PTH.py"
-      }
-    }, {
-      method: "fs.copy",
-      params: {
-        src: "SUPIR_v0.yaml",
-        dest: "app/options/SUPIR_v0.yaml",
       }
     }, {
       method: "fs.share",
@@ -96,11 +98,6 @@ module.exports = async (kernel) => {
         html: "Click the 'start' tab to get started!"
       }
     }]
-  }
-  let pre_command = pre(config, kernel)
-  if (pre_command) {
-    //script.run[2].params.message = [pre_command].concat(script.run[2].params.message)
-    script.run[1].params.message = [pre_command].concat(script.run[1].params.message)
   }
   return script
 }
