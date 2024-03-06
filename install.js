@@ -17,7 +17,8 @@ module.exports = async (kernel) => {
       params: {
         message: [
           //"git clone https://github.com/cocktailpeanut/SUPIR app",
-          "git clone https://github.com/Fanghua-Yu/SUPIR app",
+          //"git clone https://github.com/Fanghua-Yu/SUPIR app",
+          "git clone https://github.com/betapeanut/SUPIR app",
         ]
       }
     }, {
