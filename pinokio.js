@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
-  version: "1.1",
+  version: "1.2",
   title: "supir",
-  description: "",
+  description: "Text-driven, intelligent restoration, blending AI technology with creativity to give every image a brand new life https://supir.xpixel.group",
   icon: "icon.png",
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
