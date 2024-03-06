@@ -43,3 +43,4 @@ webdataset==0.2.48
 facexlib==0.3.0
 diffusers
 accelerate
+bitsandbytes
