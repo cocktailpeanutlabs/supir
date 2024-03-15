@@ -38,6 +38,7 @@ module.exports = async (kernel) => {
         //conda: "env",
         path: "app",
         message: [
+          "{{gpu === 'nvidia' ? 'conda install -y nvidia/label/cuda-12.1.0::cuda' : null}}",
           torch_xformers,
           "pip install -r ../requirements.txt"
         ],
