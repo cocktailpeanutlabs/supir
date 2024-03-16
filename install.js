@@ -40,7 +40,7 @@ module.exports = async (kernel) => {
         message: [
           "{{gpu === 'nvidia' ? 'conda install -y nvidia/label/cuda-12.1.0::cuda' : null}}",
           "{{gpu === 'nvidia' && platform === 'win32' ? 'conda install -y cudnn libzlib-wapi -c conda-forge' : null}}",
-          "{{gpu === 'nvidia' && platform === 'linux' ? 'conda install -y cudnn -c conda-forge' : null}}",
+          "{{gpu === 'nvidia' && platform === 'linux' ? 'conda install -y cudnn nccl -c conda-forge' : null}}",
           torch_xformers,
           "pip install -r ../requirements.txt"
         ],
