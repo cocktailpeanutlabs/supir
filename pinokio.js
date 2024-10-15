@@ -24,11 +24,14 @@ module.exports = {
             icon: "fa-solid fa-rocket",
             text: "Open Web UI",
             href: local.url,
-            popout: true
           }, {
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
             href: "start.js",
+          }, {
+            icon: "fa-solid fa-flask",
+            text: "Outputs",
+            href: "outputs?fs"
           }]
         } else {
           return [{
