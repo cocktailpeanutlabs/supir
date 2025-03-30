@@ -43,7 +43,7 @@ module.exports = async (kernel) => {
           "{{gpu === 'nvidia' && platform === 'linux' ? 'conda install -y cudnn=8.9.7.29 nccl -c conda-forge' : null}}",
           torch_xformers,
           "pip install -r ../requirements.txt",
-          "pip install pydantic==2.10.6"
+          "pip install \"pydantic>=2.0,<2.11.0\"",
         ],
       }
     }, {
